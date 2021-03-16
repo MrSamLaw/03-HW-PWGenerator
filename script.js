@@ -43,8 +43,31 @@ function generatePassword() {
     alert("At least one character set must be selected");
     return;
   }
-}
 
+  var i = 0;
+  var password = "";
+  // While password is less than pwdLength
+  while (i < pwdLength) {
+    // Randomly select one of the four functions
+    var chooseFunction = Math.floor(Math.random() * 4);
+    console.log(chooseFunction);
+    if (pwdLowercase && (chooseFunction === 0)) {
+      password += getRandomLower();
+      i++;
+    } else if (pwdUppercase && (chooseFunction === 1)) {
+      password += getRandomUpper();
+      i++;
+    } else if (pwdNumerals && (chooseFunction === 2)) {
+      password += getRandomNumeral();
+      i++;
+    } else if (pwdSpecials && (chooseFunction === 3)) {
+      password += getRandomSpecial();
+      i++;
+    }
+
+  }
+  return password;
+}
 
 function getRandomLower() {
   // Generate a random number between 0 & 25, offset it by 97 (for lower case characters), and pull character from UTF-16 Code table
@@ -63,7 +86,7 @@ function getRandomNumeral() {
 
 function getRandomSpecial() {
   // Create a String constant to hold special characters
-  const specials = '~`!';
+  const specials = "~`!@#$%^&*(||)-=_+[]{}?<>,.";
   // Generte a random number between 0 & length of specials & pull the corresponding character
   return specials[Math.floor(Math.random() * specials.length)];
 }

@@ -44,3 +44,19 @@ function generatePassword() {
     return;
   }
 }
+
+function getRandomLower() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+}
+
+function getRandomUpper() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+
+function getRandomNumeral() {
+  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+}
+
+console.log("getRandomLower has generated " + getRandomLower());
+console.log("getRandomUpper has generated " + getRandomUpper());
+console.log("getRandomNumeral has generated " + getRandomNumeral());

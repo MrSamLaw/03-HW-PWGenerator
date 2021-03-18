@@ -44,29 +44,37 @@ function generatePassword() {
     return;
   }
 
-  var i = 0;
+  // var i = 0;
   var password = "";
-  // While password is less than pwdLength
-  while (i < pwdLength) {
-    // Randomly select one of the four functions
-    var chooseFunction = Math.floor(Math.random() * 4);
-    console.log(chooseFunction);
-    if (pwdLowercase && (chooseFunction === 0)) {
-      password += getRandomLower();
-      i++;
-    } else if (pwdUppercase && (chooseFunction === 1)) {
-      password += getRandomUpper();
-      i++;
-    } else if (pwdNumerals && (chooseFunction === 2)) {
-      password += getRandomNumeral();
-      i++;
-    } else if (pwdSpecials && (chooseFunction === 3)) {
-      password += getRandomSpecial();
-      i++;
-    }
+  // // While password is less than pwdLength
+  // while (i < pwdLength) {
+  //   // Randomly select one of the four functions
+  //   var chooseFunction = Math.floor(Math.random() * 4);
+  //   console.log(chooseFunction);
+  //   if (pwdLowercase && (chooseFunction === 0)) {
+  //     password += getRandomLower();
+  //     i++;
+  //   } else if (pwdUppercase && (chooseFunction === 1)) {
+  //     password += getRandomUpper();
+  //     i++;
+  //   } else if (pwdNumerals && (chooseFunction === 2)) {
+  //     password += getRandomNumeral();
+  //     i++;
+  //   } else if (pwdSpecials && (chooseFunction === 3)) {
+  //     password += getRandomSpecial();
+  //     i++;
+  //   }
+
+  // }
+  // return password;
+
+  // Optimising the section above
+  for (i = 0; i < pwdLength; i++) {
 
   }
+
   return password;
+
 }
 
 function getRandomLower() {

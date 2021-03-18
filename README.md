@@ -1,5 +1,6 @@
 # 03-HW-PWGenerator
 
+![Initial Screen](assets/images/PWGen-00.png)
 ## Description
 
 Our client has requested an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
@@ -26,6 +27,22 @@ Password generator must allow for the following criteria:
 - Prompt user to confirm if special characters to be included
 - Store choice
 - Validation that all are not false
-- Generate password based on criteria
-- (Generation code)
+- Generate password based on criteria [**Loop**]
+    - choose a random character type
+    - if *x* character then choose random character
+    - append to password until password is required length
 - Output password
+
+### Deployment
+The final deployed code can be found at:
+[https://mrsamlaw.github.io/03-HW-PWGenerator/](https://mrsamlaw.github.io/03-HW-PWGenerator/)
+
+### Screenshots
+![Password Length prompt](assets/images/PWGen-01.png)
+Password length prompt
+
+![Special Characters confirmation](assets/images/PWGen-05.png)
+Special characters confirmation
+
+![Final Password Output](assets/images/PWGen-06.png)
+Final output of a 128 character password

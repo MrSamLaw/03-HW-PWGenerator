@@ -1,6 +1,28 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+function getRandomLower() {
+  // Generate a random number between 0 & 25, offset it by 97 (for lower case characters), and pull character from UTF-16 Code table
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+}
+
+function getRandomUpper() {
+  // Generate a random number between 0 & 25, offset it by 65 (for upper case characters), and pull character from UTF-16 Code table
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+
+function getRandomNumeral() {
+  // Generate a random number between 0 & 10, offset it by 48 (for numerals), and pull character from UTF-16 Code table
+  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+}
+
+function getRandomSpecial() {
+  // Create a String constant to hold special characters
+  const specials = "~`!@#$%^&*(||)-=_+[]{}?<>,.";
+  // Generte a random number between 0 & length of specials & pull the corresponding character
+  return specials[Math.floor(Math.random() * specials.length)];
+}
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -66,26 +88,4 @@ function generatePassword() {
 
   }
   return password;
-}
-
-function getRandomLower() {
-  // Generate a random number between 0 & 25, offset it by 97 (for lower case characters), and pull character from UTF-16 Code table
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-}
-
-function getRandomUpper() {
-  // Generate a random number between 0 & 25, offset it by 65 (for upper case characters), and pull character from UTF-16 Code table
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-}
-
-function getRandomNumeral() {
-  // Generate a random number between 0 & 10, offset it by 48 (for numerals), and pull character from UTF-16 Code table
-  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-}
-
-function getRandomSpecial() {
-  // Create a String constant to hold special characters
-  const specials = "~`!@#$%^&*(||)-=_+[]{}?<>,.";
-  // Generte a random number between 0 & length of specials & pull the corresponding character
-  return specials[Math.floor(Math.random() * specials.length)];
 }

@@ -4,7 +4,7 @@
 
 ## Deployment
 The final deployed code can be found at:
-[https://mrsamlaw.github.io/03-HW-PWGenerator/](https://mrsamlaw.github.io/03-HW-PWGenerator/)
+[https://mrsamlaw.github.io/PWGenerator/](https://mrsamlaw.github.io/PWGenerator/)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
